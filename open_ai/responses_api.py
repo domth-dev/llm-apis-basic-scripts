@@ -11,14 +11,12 @@ client = OpenAI(
 instructions = "You are a helpful assistant."
 user_input = "What is the capital of France?"
 
-stream_response = client.responses.create(
+response = client.responses.create(
     model="gpt-4o",
     instructions=instructions,
     input=user_input,
     stream=True
 )
 
-for chunk in stream_response:
-    content = chunk.text
-    if content:
-        print(content, end="", flush=True)
+print(response.output_text)
+#print(response.output[0].content[0].text)

@@ -23,4 +23,3 @@ response = client.chat.complete(
 )
 
 print(response.choices[0].message.content)
-print(response)

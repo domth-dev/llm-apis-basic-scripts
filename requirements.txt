@@ -3,3 +3,4 @@ openai
 mistralai
 google-genai
 python-dotenv
+rich
